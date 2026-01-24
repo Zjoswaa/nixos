@@ -19,6 +19,7 @@
     pkgs.discord
     pkgs.keepassxc
     pkgs.kdePackages.dolphin
+    pkgs.nerd-fonts.jetbrains-mono
   ];
 
   home.pointerCursor = {
