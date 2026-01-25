@@ -90,6 +90,7 @@
     vim
     git
     wget
+    neofetch
     xdg-user-dirs
     kitty
     waybar
