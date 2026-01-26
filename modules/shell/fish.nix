@@ -9,9 +9,11 @@
     programs.fish = {
       enable = true;
       shellAliases = {
+        ".." = "cd ..";
         la = "ls -a";
         ll = "ls -l";
         lla = "ls -l -a";
+        py = "python";
       };
       interactiveShellInit = ''
         set fish_greeting

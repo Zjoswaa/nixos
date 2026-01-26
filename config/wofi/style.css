@@ -1,7 +1,13 @@
 #window {
   font-size: 1rem;
-  color: white;
-  background-color: #5F9EA0;
+  font-family: "JetBrains Mono Nerd Font";
+  color: #CDD6F4;
+  background-color: #1E1E2E;
   border: 1px solid grey;
   border-radius: 0.5rem;
+}
+
+#input {
+ background-color: #585B70;
+ color: #CDD6F4;
 }

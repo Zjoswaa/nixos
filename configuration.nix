@@ -1,8 +1,4 @@
-# Edit this configuration file to define what should be installed on
-# your system. Help is available in the configuration.nix(5) man page, on
-# https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
-
-{ pkgs, lib, config, ... }:
+{ pkgs, lib, config, inputs, ... }:
 
 {
   imports = [
@@ -38,6 +34,12 @@
 
   # Configure network connections interactively with nmcli or nmtui.
   networking.networkmanager.enable = true;
+  networking.wireless.iwd.enable = true;
+  networking.networkmanager.wifi.backend = "iwd";
+
+  # Bluetooth
+  hardware.bluetooth.enable = true;
+  services.blueman.enable = true;
 
   # Set your time zone.
   time.timeZone = "Europe/Amsterdam";
@@ -77,7 +79,6 @@
   # Enable touchpad support (enabled default in most desktopManager).
   services.libinput.enable = true;
 
-  # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.joshua = {
     isNormalUser = true;
     extraGroups = [ "wheel" ];
@@ -86,19 +87,21 @@
 
   # List packages installed in system profile.
   # You can use https://search.nixos.org/ to find more packages (and options).
-  environment.systemPackages = with pkgs; [
-    vim
-    git
-    wget
-    neofetch
-    xdg-user-dirs
-    kitty
-    waybar
-    hyprpaper
-    hyprcursor
-    wofi
-    noto-fonts
-    terminus_font
+  environment.systemPackages = [ 
+    pkgs.vim
+    pkgs.git
+    pkgs.wget
+    pkgs.neofetch
+    pkgs.xdg-user-dirs
+    pkgs.playerctl
+    pkgs.kitty
+    pkgs.waybar
+    pkgs.hyprpaper
+    pkgs.hyprcursor
+    pkgs.wofi
+    pkgs.kdePackages.dolphin
+    pkgs.noto-fonts
+    pkgs.terminus_font
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -115,8 +118,10 @@
   # services.openssh.enable = true;
 
   # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
+  # 57612: Spotify sync local files
+  networking.firewall.allowedTCPPorts = [ 57612 ];
+  # 5353: Spotify Connect
+  networking.firewall.allowedUDPPorts = [ 5353 ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
 

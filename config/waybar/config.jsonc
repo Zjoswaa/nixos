@@ -18,11 +18,17 @@
         "custom/sep",
         "network",
         "custom/sep",
+	"wireplumber",
+	"custom/sep",
+	"wireplumber#source",
+	"custom/sep",
         "cpu",
         "custom/sep",
         "memory",
         "custom/sep",
-        "disk",
+	//"disk",
+	//"custom/sep",
+        "battery",
         "custom/sep",
         "clock",
         "custom/sep",
@@ -34,13 +40,10 @@
         "disable-scroll": true,
         "all-outputs": true,
         "warp-on-scroll": false,
-        "format": "{name}",
-        "persistent-workspaces": {
-            "*" : 9
-        }
+        "format": "{name}"
     },
     "hyprland/window" : {
-        "max-length": 40,
+        "max-length": 64,
         "seperate-outputs": false
     },
     "tray": {
@@ -52,14 +55,16 @@
         // }
     },
     "clock": {
-        "format-alt": "{:%Y-%m-%d}"
+        "format-alt": "{:%d %b %Y}",
+	"tooltip": false
     },
     "cpu": {
         "format": "CPU: {usage}%",
         "tooltip": false
     },
     "memory": {
-        "format": "Mem: {used}GiB"
+        "format": "Mem: {used}GiB",
+	"tooltip": false
     },
     "disk": {
         "interval": 60,
@@ -72,18 +77,35 @@
             "warning": 30,
             "critical": 15
         },
-        "format": "Bat: {capacity}% {icon} {time}",
+        "format": "{capacity}% {icon}",
         "format-plugged": "{capacity}% ",
-        "format-alt": "Bat {capacity}%",
-        "format-time": "{H}:{M}",
-        "format-icons": ["", "", "", "", ""]
+        "format-icons": ["", "", "", "", ""],
+	"tooltip": false
     },
     "network": {
-        "format": "Online",
-        "format-disconnected": "Disconnected ⚠"
+        "format": "Connected",
+	"format-ethernet": "{ipaddr}/{cidr} 󰈀",
+	"format-wifi": "{essid} ({signalStrength}%) 󰖩",
+        "format-disconnected": "Disconnected",
+	"tooltip-format": "{ifname} via {gwaddr}"
     },
     "custom/sep": {
         "format" : "|",
         "interval" : 0
+    },
+    "wireplumber": {
+        "node-type": "Audio/Sink",
+	"format": "{volume}% {icon}",
+	"format-muted": "󰸈",
+	"format-icons": ["󰕿", "󰖀", "󰕾"],
+	"scroll-step": 1.0,
+        "on-click-middle": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+    },
+    "wireplumber#source": {
+        "node-type": "Audio/Source",
+	"format": "{volume}% 󰍬",
+	"format-muted": "󰍭",
+	"scroll-step": 1.0,
+        "on-click-middle": "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
     }
 }

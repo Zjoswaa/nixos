@@ -3,3 +3,5 @@ allow_images = false
 prompt = Search
 width = 20%
 height = 30%
+term = kitty
+insensitive = true
