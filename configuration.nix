@@ -39,7 +39,7 @@
 
   # Bluetooth
   hardware.bluetooth.enable = true;
-  services.blueman.enable = true;
+  #services.blueman.enable = true;
 
   # Set your time zone.
   time.timeZone = "Europe/Amsterdam";
@@ -94,6 +94,7 @@
     pkgs.neofetch
     pkgs.xdg-user-dirs
     pkgs.playerctl
+    pkgs.bluez
     pkgs.kitty
     pkgs.waybar
     pkgs.hyprpaper

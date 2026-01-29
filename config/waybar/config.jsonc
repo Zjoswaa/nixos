@@ -93,11 +93,12 @@
     },
     "custom/sep": {
         "format" : "|",
-        "interval" : 0
+        "interval" : 0,
+	"tooltip": false
     },
     "wireplumber": {
         "node-type": "Audio/Sink",
-	"format": "{volume}% {icon}",
+	"format": " {volume}% {icon} ",
 	"format-muted": "󰸈",
 	"format-icons": ["󰕿", "󰖀", "󰕾"],
 	"scroll-step": 1.0,
@@ -105,7 +106,7 @@
     },
     "wireplumber#source": {
         "node-type": "Audio/Source",
-	"format": "{volume}% 󰍬",
+	"format": " {volume}% 󰍬 ",
 	"format-muted": "󰍭",
 	"scroll-step": 1.0,
         "on-click-middle": "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
