@@ -98,6 +98,7 @@
     pkgs.waybar
     pkgs.hyprpaper
     pkgs.hyprcursor
+    pkgs.hyprshot
     pkgs.wofi
     pkgs.kdePackages.dolphin
     pkgs.noto-fonts

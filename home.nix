@@ -41,6 +41,7 @@
     pkgs.keepassxc
     pkgs.nerd-fonts.jetbrains-mono
     pkgs.python314
+    pkgs.vscode-fhs
   ];
 
   home.pointerCursor = {

@@ -87,6 +87,8 @@
 	"format-ethernet": "{ipaddr}/{cidr} 󰈀",
 	"format-wifi": "{essid} ({signalStrength}%) 󰖩",
         "format-disconnected": "Disconnected",
+	"tooltip-format-ethernet": "IF: {ifname}\nIP: {ipaddr}/{cidr}\nGW: {gwaddr}",
+        "tooltip-format-wifi": "IF: {ifname}\nIP: {ipaddr}/{cidr}\nGW: {gwaddr}",
 	"tooltip-format": "{ifname} via {gwaddr}"
     },
     "custom/sep": {
