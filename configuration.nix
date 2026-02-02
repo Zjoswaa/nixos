@@ -13,6 +13,9 @@
 
   networking.hostName = "legion";
 
+  services.displayManager.ly.enable = true;
+  services.displayManager.defaultSession = "hyprland";
+
   # Enable OpenGL
   hardware.graphics = {
     enable = true;
@@ -61,7 +64,11 @@
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
   console = {
-    font = "Lat2-Terminus16";
+    earlySetup = true;
+    #font = "${pkgs.terminus_font}/share/consolefonts/ter-132b.psf.gz";
+    font = "ter-132b";
+    packages = [ pkgs.terminus_font ];
+    keyMap = "us";
   };
 
   # Enable the X11 windowing system.
@@ -97,6 +104,7 @@
     pkgs.git
     pkgs.wget
     pkgs.killall
+    pkgs.kbd
     pkgs.neofetch
     pkgs.xdg-user-dirs
     pkgs.playerctl
@@ -111,8 +119,11 @@
     #pkgs.kdePackages.dolphin
     pkgs.nautilus
     pkgs.file-roller
+  ];
+
+  fonts.packages = [
+    pkgs.nerd-fonts.jetbrains-mono
     pkgs.noto-fonts
-    pkgs.terminus_font
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
