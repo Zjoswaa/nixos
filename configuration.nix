@@ -96,6 +96,7 @@
     pkgs.vim
     pkgs.git
     pkgs.wget
+    pkgs.killall
     pkgs.neofetch
     pkgs.xdg-user-dirs
     pkgs.playerctl
@@ -109,6 +110,7 @@
     pkgs.swaynotificationcenter
     #pkgs.kdePackages.dolphin
     pkgs.nautilus
+    pkgs.file-roller
     pkgs.noto-fonts
     pkgs.terminus_font
   ];
