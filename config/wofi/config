@@ -5,3 +5,4 @@ width = 20%
 height = 30%
 term = kitty
 insensitive = true
+key_expand = Tab
