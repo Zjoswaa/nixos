@@ -11,13 +11,11 @@
   home.homeDirectory = "/home/joshua";
   home.stateVersion = "25.11";
 
-  #home.file.".config/hypr/hyprland.conf".source = ./config/hypr/hyprland.conf;
-  #home.file.".config/hypr/hyprpaper.conf".source = ./config/hypr/hyprpaper.conf;
-  #home.file.".config/kitty/kitty.conf".source = ./config/kitty/kitty.conf;
-  #home.file.".config/wofi/config".source = ./config/wofi/config;
-  #home.file.".config/wofi/style.css".source = ./config/wofi/style.css;
-  #home.file.".config/waybar/config.jsonc".source = ./config/waybar/config.jsonc;
-  #home.file.".config/waybar/style.css".source = ./config/waybar/style.css;
+  home.sessionVariables = {
+    EDITOR = "code";
+    VISUAL = "code";
+  };
+
   home.file.".config/hypr" = {
     source = ./config/hypr;
     recursive = true;
@@ -48,5 +46,30 @@
     name = "Bibata-Modern-Ice";
     package = pkgs.bibata-cursors;
     size = 16;
+  };
+
+  dconf.settings = {
+    "org/gnome/desktop/interface" = {
+      color-scheme = "prefer-dark";
+    };
+  };
+
+  gtk = {
+    enable = true;
+    theme = {
+      name = "Adwaita-dark";
+      package = pkgs.gnome-themes-extra;
+    };
+    iconTheme = {
+      name = "Papirus-Dark";
+      package = pkgs.papirus-icon-theme;
+    };
+  };
+
+  xdg.mimeApps = {
+    enable = true;
+    defaultApplications = {
+      "text/plain" = [ "code.desktop" ];
+    };
   };
 }

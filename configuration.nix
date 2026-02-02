@@ -37,6 +37,11 @@
   networking.wireless.iwd.enable = true;
   networking.networkmanager.wifi.backend = "iwd";
 
+  # Enable network filesystems
+  services.gvfs.enable = true;
+
+  programs.dconf.enable = true;
+
   # Bluetooth
   hardware.bluetooth.enable = true;
   #services.blueman.enable = true;
@@ -82,7 +87,7 @@
   users.users.joshua = {
     isNormalUser = true;
     extraGroups = [ "wheel" ];
-    packages = with pkgs; [ ];
+    packages = [ ];
   };
 
   # List packages installed in system profile.
@@ -101,7 +106,9 @@
     pkgs.hyprcursor
     pkgs.hyprshot
     pkgs.wofi
-    pkgs.kdePackages.dolphin
+    pkgs.swaynotificationcenter
+    #pkgs.kdePackages.dolphin
+    pkgs.nautilus
     pkgs.noto-fonts
     pkgs.terminus_font
   ];

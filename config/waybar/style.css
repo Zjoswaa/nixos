@@ -99,7 +99,7 @@ window#waybar {
 
 #wireplumber.muted {
     color: @brblk;
-    border-bottom: @brblk;
+    border-bottom: 4px solid @brblk;
 }
 
 #tray {

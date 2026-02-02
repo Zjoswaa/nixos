@@ -99,7 +99,7 @@
     "wireplumber": {
         "node-type": "Audio/Sink",
 	"format": " {volume}% {icon} ",
-	"format-muted": "󰸈",
+	"format-muted": " 󰸈 ",
 	"format-icons": ["󰕿", "󰖀", "󰕾"],
 	"scroll-step": 1.0,
         "on-click-middle": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
@@ -107,7 +107,7 @@
     "wireplumber#source": {
         "node-type": "Audio/Source",
 	"format": " {volume}% 󰍬 ",
-	"format-muted": "󰍭",
+	"format-muted": " 󰍭 ",
 	"scroll-step": 1.0,
         "on-click-middle": "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
     }
