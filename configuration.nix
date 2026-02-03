@@ -6,10 +6,12 @@
   ];
 
   nixpkgs.config.allowUnfree = true;
+  hardware.enableRedistributableFirmware = true;
 
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  boot.kernelModules = [ "btusb" "ideapad_laptop" ];
 
   networking.hostName = "legion";
 
@@ -49,8 +51,11 @@
   programs.dconf.enable = true;
 
   # Bluetooth
-  hardware.bluetooth.enable = true;
-  #services.blueman.enable = true;
+  hardware.bluetooth = {
+    enable = true;
+    powerOnBoot = true;
+  };
+  services.blueman.enable = true;
 
   # Set your time zone.
   time.timeZone = "Europe/Amsterdam";
@@ -89,6 +94,8 @@
   services.pipewire = {
     enable = true;
     pulse.enable = true;
+    alsa.enable = true;
+    alsa.support32Bit = true;
   };
 
   # Enable touchpad support (enabled default in most desktopManager).
@@ -109,6 +116,7 @@
     pkgs.killall
     pkgs.kbd
     pkgs.xdg-user-dirs
+    pkgs.pulseaudio
   ];
 
   fonts.packages = [
