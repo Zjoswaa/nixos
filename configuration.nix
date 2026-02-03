@@ -16,6 +16,9 @@
   services.displayManager.ly.enable = true;
   services.displayManager.defaultSession = "hyprland";
 
+  xdg.portal.enable = true;
+  xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-hyprland ];
+
   # Enable OpenGL
   hardware.graphics = {
     enable = true;
@@ -105,20 +108,7 @@
     pkgs.wget
     pkgs.killall
     pkgs.kbd
-    pkgs.neofetch
     pkgs.xdg-user-dirs
-    pkgs.playerctl
-    pkgs.bluez
-    pkgs.kitty
-    pkgs.waybar
-    pkgs.hyprpaper
-    pkgs.hyprcursor
-    pkgs.hyprshot
-    pkgs.wofi
-    pkgs.swaynotificationcenter
-    #pkgs.kdePackages.dolphin
-    pkgs.nautilus
-    pkgs.file-roller
   ];
 
   fonts.packages = [

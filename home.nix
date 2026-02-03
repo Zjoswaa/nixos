@@ -34,6 +34,17 @@
   };
 
   home.packages = [
+    pkgs.neofetch
+    pkgs.playerctl
+    pkgs.kitty
+    pkgs.waybar
+    pkgs.hyprpaper
+    pkgs.hyprcursor
+    pkgs.hyprshot
+    pkgs.wofi
+    pkgs.swaynotificationcenter
+    pkgs.nautilus
+    pkgs.file-roller
     pkgs.discord
     pkgs.spotify
     pkgs.keepassxc
