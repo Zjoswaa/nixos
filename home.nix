@@ -5,6 +5,7 @@
     ./modules/browser
     ./modules/git
     ./modules/shell
+    ./modules/vscode
   ];
 
   home.username = "joshua";
@@ -49,7 +50,7 @@
     pkgs.spotify
     pkgs.keepassxc
     pkgs.python314
-    pkgs.vscode-fhs
+    pkgs.gcc
   ];
 
   home.pointerCursor = {
