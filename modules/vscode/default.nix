@@ -10,6 +10,7 @@
         extensions = with pkgs.vscode-extensions; [
           pkief.material-icon-theme
           dracula-theme.theme-dracula
+          esbenp.prettier-vscode
           github.copilot
           github.copilot-chat
           ms-python.python
@@ -44,6 +45,7 @@
           "extensions.ignoreRecommendations" = true;
           "terminal.integrated.initialHint" = false;
           "git.confirmSync" = false;
+          "editor.defaultFormatter" = "esbenp.prettier-vscode";
         };
       };
     };
