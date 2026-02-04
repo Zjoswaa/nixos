@@ -57,6 +57,7 @@
     pkgs.gdb
     pkgs.ninja
     pkgs.gnumake
+    pkgs.nodejs_25
   ];
 
   home.pointerCursor = {
