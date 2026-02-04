@@ -46,6 +46,8 @@
     pkgs.swaynotificationcenter
     pkgs.nautilus
     pkgs.file-roller
+    pkgs.eog
+    pkgs.vlc
     pkgs.discord
     pkgs.spotify
     pkgs.keepassxc
@@ -81,6 +83,25 @@
     enable = true;
     defaultApplications = {
       "text/plain" = [ "code.desktop" ];
+      "text/markdown" = [ "code.desktop" ];
+      "text/html" = [ "firefox.desktop" ];
+
+      "application/pdf" = [ "firefox.desktop" ];
+
+      "image/png" = [ "eog.desktop" ];
+      "image/jpeg" = [ "eog.desktop" ];
+      "image/gif" = [ "eog.desktop" ];
+      "image/bmp" = [ "eog.desktop" ];
+
+      "audio/mpeg" = [ "vlc.desktop" ];
+      "audio/ogg" = [ "vlc.desktop" ];
+
+      "video/mp4" = [ "vlc.desktop" ];
+      "video/x-matroska" = [ "vlc.desktop" ];
+
+      "application/zip" = [ "file-roller.desktop" ];
+      "application/x-tar" = [ "file-roller.desktop" ];
+      "application/x-gzip" = [ "file-roller.desktop" ];
     };
   };
 }
