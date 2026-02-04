@@ -117,6 +117,7 @@
     pkgs.kbd
     pkgs.xdg-user-dirs
     pkgs.pulseaudio
+    pkgs.papirus-icon-theme
   ];
 
   fonts.packages = [
