@@ -40,6 +40,7 @@
           "terminal.integrated.defaultProfile.linux" = "fish";
           "extensions.ignoreRecommendations" = true;
           "terminal.integrated.initialHint" = false;
+          "git.confirmSync" = false;
         };
       };
     };
