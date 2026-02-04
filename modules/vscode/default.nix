@@ -10,11 +10,14 @@
         extensions = with pkgs.vscode-extensions; [
           pkief.material-icon-theme
           dracula-theme.theme-dracula
-          bbenoist.nix
-          ms-vscode.cpptools
+          github.copilot
+          github.copilot-chat
           ms-python.python
+          ms-vscode.cpptools
           editorconfig.editorconfig
+          bbenoist.nix
         ];
+
         userSettings = {
           "editor.fontSize" = 16;
           "editor.fontFamily" = "'JetBrainsMonoNL Nerd Font Mono', 'Droid Sans Mono', 'monospace', monospace";
