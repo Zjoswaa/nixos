@@ -53,6 +53,8 @@
     pkgs.keepassxc
     pkgs.python314
     pkgs.gcc
+    pkgs.cmake
+    pkgs.gdb
   ];
 
   home.pointerCursor = {
