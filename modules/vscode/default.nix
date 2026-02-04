@@ -13,6 +13,7 @@
           bbenoist.nix
           ms-vscode.cpptools
           ms-python.python
+          editorconfig.editorconfig
         ];
         userSettings = {
           "editor.fontSize" = 16;
@@ -34,7 +35,7 @@
           "explorer.confirmDragAndDrop" = false;
           "explorer.confirmDelete" = false;
           "explorer.decorations.badges" = false;
-          "window.titleBarStyle" = "native";
+          "window.titleBarStyle" = "custom";
           "editor.cursorBlinking" = "phase";
           "terminal.integrated.defaultProfile.linux" = "fish";
           "extensions.ignoreRecommendations" = true;
