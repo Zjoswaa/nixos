@@ -52,9 +52,11 @@
     pkgs.spotify
     pkgs.keepassxc
     pkgs.python314
-    pkgs.gcc
     pkgs.cmake
+    pkgs.gcc
     pkgs.gdb
+    pkgs.ninja
+    pkgs.gnumake
   ];
 
   home.pointerCursor = {
