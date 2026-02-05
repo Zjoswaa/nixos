@@ -44,6 +44,7 @@
     pkgs.hyprshot
     pkgs.wofi
     pkgs.swaynotificationcenter
+    pkgs.libnotify
     pkgs.nautilus
     pkgs.file-roller
     pkgs.eog
