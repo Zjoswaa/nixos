@@ -15,8 +15,10 @@
           github.copilot-chat
           ms-python.python
           ms-vscode.cpptools
+          ms-vscode.cmake-tools
           editorconfig.editorconfig
           bbenoist.nix
+          davidanson.vscode-markdownlint
         ];
 
         userSettings = {
