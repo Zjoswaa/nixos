@@ -58,6 +58,7 @@
     pkgs.gdb
     pkgs.ninja
     pkgs.gnumake
+    pkgs.valgrind
     pkgs.nodejs_25
   ];
 
