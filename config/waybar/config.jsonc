@@ -59,12 +59,13 @@
 	"tooltip": false
     },
     "cpu": {
-        "format": "CPU: {usage}%",
-        "tooltip": false
+        "format": "{usage}% ",
+        "tooltip": true
     },
     "memory": {
-        "format": "Mem: {used}GiB",
-	"tooltip": false
+        "format": "{used}GiB ",
+	    "tooltip": true,
+        "tooltip-format": "Used: {used} / {total}GiB\nSwap: {swapUsed} / {swapTotal}GiB"
     },
     "disk": {
         "interval": 60,
@@ -80,7 +81,7 @@
         "format": "{capacity}% {icon}",
         "format-plugged": "{capacity}% ",
         "format-icons": ["", "", "", "", ""],
-	"tooltip": false
+	    "tooltip": true
     },
     "network": {
         "format": "Connected",
