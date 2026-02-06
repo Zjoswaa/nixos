@@ -3,6 +3,7 @@
 {
   imports = [
     ./hardware-configuration.nix
+    ./modules/fontconfig
   ];
 
   nixpkgs.config.allowUnfree = true;
