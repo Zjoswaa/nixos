@@ -35,6 +35,7 @@
   };
 
   home.packages = [
+    # Util & Core
     pkgs.neofetch
     pkgs.playerctl
     pkgs.kitty
@@ -45,6 +46,8 @@
     pkgs.wofi
     pkgs.swaynotificationcenter
     pkgs.libnotify
+
+    # Applications
     pkgs.nautilus
     pkgs.file-roller
     pkgs.eog
@@ -52,6 +55,8 @@
     pkgs.discord
     pkgs.spotify
     pkgs.keepassxc
+
+    # Development
     pkgs.python314
     pkgs.cmake
     pkgs.gcc
