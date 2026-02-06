@@ -43,6 +43,7 @@
     pkgs.hyprpaper
     pkgs.hyprcursor
     pkgs.hyprshot
+    pkgs.hyprpicker
     pkgs.wofi
     pkgs.swaynotificationcenter
     pkgs.libnotify
