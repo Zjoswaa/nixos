@@ -33,6 +33,10 @@
     source = ./config/waybar;
     recursive = true;
   };
+  home.file."scripts" = {
+    source = ./scripts;
+    recursive = true;
+  };
 
   home.packages = [
     # Util & Core
