@@ -142,6 +142,7 @@ menu separator {
     background-color: alpha(@blk, 0.4);
     border: 1px solid @grn;
     border-radius: 8px;
+    padding: 0 14px 0 8px;
 }
 
 #network.disconnected {
