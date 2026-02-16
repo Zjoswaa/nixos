@@ -4,6 +4,7 @@
   imports = [
     ./modules/browser
     ./modules/git
+    ./modules/java
     ./modules/shell
     ./modules/vscode
   ];
@@ -61,15 +62,26 @@
     pkgs.spotify
     pkgs.keepassxc
 
-    # Development
+    # IDE's
+    pkgs.jetbrains.idea
+
+    # Python
     pkgs.python314
+    pkgs.uv
+
+    # C / C++
     pkgs.cmake
     pkgs.gcc
     pkgs.gdb
     pkgs.ninja
     pkgs.gnumake
     pkgs.valgrind
+
+    # Node
     pkgs.nodejs_25
+
+    # Java
+    pkgs.maven
   ];
 
   home.pointerCursor = {
