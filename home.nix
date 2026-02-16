@@ -52,6 +52,7 @@
     pkgs.wofi
     pkgs.swaynotificationcenter
     pkgs.libnotify
+    pkgs.lm_sensors
 
     # Applications
     pkgs.nautilus
