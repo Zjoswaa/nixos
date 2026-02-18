@@ -3,6 +3,7 @@
 {
   imports = [
     ./hardware-configuration.nix
+    ./modules/docker
     ./modules/fontconfig
   ];
 
@@ -104,7 +105,7 @@
 
   users.users.joshua = {
     isNormalUser = true;
-    extraGroups = [ "wheel" ];
+    extraGroups = [ "wheel" "docker" ];
     packages = [ ];
   };
 
