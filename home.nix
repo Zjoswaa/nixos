@@ -83,6 +83,7 @@
 
     # Java
     pkgs.maven
+    pkgs.gradle_9
   ];
 
   home.pointerCursor = {
