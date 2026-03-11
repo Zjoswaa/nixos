@@ -41,7 +41,7 @@
 
   home.packages = [
     # Util & Core
-    pkgs.neofetch
+    pkgs.fastfetch
     pkgs.playerctl
     pkgs.kitty
     pkgs.waybar
