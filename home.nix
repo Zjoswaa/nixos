@@ -65,6 +65,7 @@
 
     # IDE's
     pkgs.jetbrains.idea
+    pkgs.jetbrains.rider
 
     # Python
     pkgs.python314
