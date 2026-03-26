@@ -74,6 +74,7 @@
 
     # C#
     pkgs.dotnet-sdk_10
+    pkgs.dotnet-ef
 
     # C / C++
     pkgs.cmake
