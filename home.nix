@@ -42,6 +42,7 @@
   home.packages = [
     # Util & Core
     pkgs.fastfetch
+    pkgs.btop
     pkgs.playerctl
     pkgs.kitty
     pkgs.waybar
@@ -70,6 +71,9 @@
     # Python
     pkgs.python314
     pkgs.uv
+
+    # C#
+    pkgs.dotnet-sdk_10
 
     # C / C++
     pkgs.cmake
@@ -100,6 +104,7 @@
   };
 
   gtk = {
+    gtk4.theme = null;
     enable = true;
     theme = {
       name = "Adwaita-dark";
