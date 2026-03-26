@@ -63,6 +63,7 @@
     pkgs.discord
     pkgs.spotify
     pkgs.keepassxc
+    pkgs.dbeaver-bin
 
     # IDE's
     pkgs.jetbrains.idea
