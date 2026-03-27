@@ -64,6 +64,7 @@
     pkgs.spotify
     pkgs.keepassxc
     pkgs.dbeaver-bin
+    pkgs.postman
 
     # IDE's
     pkgs.jetbrains.idea
@@ -75,7 +76,6 @@
 
     # C#
     pkgs.dotnet-sdk_10
-    pkgs.dotnet-ef
 
     # C / C++
     pkgs.cmake
