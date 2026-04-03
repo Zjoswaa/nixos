@@ -63,12 +63,12 @@
     pkgs.discord
     pkgs.spotify
     pkgs.keepassxc
-    pkgs.dbeaver-bin
     pkgs.postman
 
     # IDE's
     pkgs.jetbrains.idea
     pkgs.jetbrains.rider
+    pkgs.jetbrains.clion
 
     # Python
     pkgs.python314
