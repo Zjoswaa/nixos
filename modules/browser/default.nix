@@ -14,5 +14,6 @@
         ];
       };
     };
+    configPath = "${config.xdg.configHome}/mozilla/firefox";
   };
 }
