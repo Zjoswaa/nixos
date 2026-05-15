@@ -69,6 +69,7 @@
     pkgs.jetbrains.idea
     pkgs.jetbrains.rider
     pkgs.jetbrains.clion
+    pkgs.jetbrains.webstorm
 
     # Python
     pkgs.python314
