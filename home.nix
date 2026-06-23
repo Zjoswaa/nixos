@@ -54,6 +54,7 @@
     pkgs.swaynotificationcenter
     pkgs.libnotify
     pkgs.lm_sensors
+    pkgs.brightnessctl
 
     # Applications
     pkgs.nautilus
@@ -87,7 +88,7 @@
     pkgs.valgrind
 
     # Node
-    pkgs.nodejs_25
+    pkgs.nodejs_26
 
     # Java
     pkgs.maven
