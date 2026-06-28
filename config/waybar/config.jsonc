@@ -87,12 +87,12 @@
     },
     "network": {
         "format": "Connected",
-	"format-ethernet": "{ipaddr}/{cidr} 󰈀",
-	"format-wifi": "{essid} ({signalStrength}%) 󰖩",
+	    "format-ethernet": "{ipaddr}/{cidr} 󰈀",
+	    "format-wifi": "{essid} ({signalStrength}%) 󰖩",
         "format-disconnected": "Disconnected",
-	"tooltip-format-ethernet": "IF: {ifname}\nIP: {ipaddr}/{cidr}\nGW: {gwaddr}",
+	    "tooltip-format-ethernet": "IF: {ifname}\nIP: {ipaddr}/{cidr}\nGW: {gwaddr}",
         "tooltip-format-wifi": "IF: {ifname}\nIP: {ipaddr}/{cidr}\nGW: {gwaddr}",
-	"tooltip-format": "{ifname} via {gwaddr}"
+	    "tooltip-format": "{ifname} via {gwaddr}"
     },
     // "custom/sep": {
     //     "format" : "|",
@@ -101,17 +101,18 @@
     // },
     "wireplumber": {
         "node-type": "Audio/Sink",
-	"format": "{volume}% {icon}",
-	"format-muted": "󰸈",
-	"format-icons": ["󰕿", "󰖀", "󰕾"],
-	"scroll-step": 1.0,
+	    "format": "{volume}% {icon}",
+	    "format-muted": "󰸈",
+	    "format-icons": ["󰕿", "󰖀", "󰕾"],
+	    "scroll-step": 1.0,
         "on-click-middle": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
     },
     "wireplumber#source": {
         "node-type": "Audio/Source",
-	"format": "{volume}% 󰍬",
-	"format-muted": "󰍭",
-	"scroll-step": 1.0,
-        "on-click-middle": "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
+	    "format": "{volume}% 󰍬",
+	    "format-muted": "󰍭",
+	    "scroll-step": 1.0,
+        "on-click-middle": "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle",
+        "on-click": "~/scripts/mic-menu.sh"
     }
 }
