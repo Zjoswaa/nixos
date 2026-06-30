@@ -75,7 +75,7 @@ menu separator {
 
 #workspaces button.active {
     border: 1px solid @brblk;
-    background-color: alpha(@blk, 0.4);
+    background-color: alpha(@blk, 0.6);
 }
 
 #workspaces button.urgent {
@@ -94,14 +94,14 @@ menu separator {
 
 #clock {
     color: @fg;
-    background-color: alpha(@blk, 0.4);
+    background-color: alpha(@blk, 0.6);
     border: 1px solid @fg;
     border-radius: 8px;
 }
 
 #network {
     color: @fg;
-    background-color: alpha(@blk, 0.4);
+    background-color: alpha(@blk, 0.6);
     border: 1px solid @blu;
     border-radius: 8px;
     padding: 0 10px 0 8px;
@@ -109,21 +109,21 @@ menu separator {
 
 #wireplumber {
     color: @fg;
-    background-color: alpha(@blk, 0.4);
+    background-color: alpha(@blk, 0.6);
     border: 1px solid @fg;
     border-radius: 8px;
 }
 
 #wireplumber.muted {
     color: @brblk;
-    background-color: alpha(@blk, 0.4);
+    background-color: alpha(@blk, 0.6);
     border: 1px solid @brblk;
     border-radius: 8px;
 }
 
 #cpu {
     color: @fg;
-    background-color: alpha(@blk, 0.4);
+    background-color: alpha(@blk, 0.6);
     border: 1px solid @ylw;
     border-radius: 8px;
     padding: 0 12px 0 8px;
@@ -131,7 +131,7 @@ menu separator {
 
 #memory {
     color: @fg;
-    background-color: alpha(@blk, 0.4);
+    background-color: alpha(@blk, 0.6);
     border: 1px solid @mag;
     border-radius: 8px;
     padding: 0 14px 0 8px;
@@ -139,19 +139,19 @@ menu separator {
 
 #battery {
     color: @fg;
-    background-color: alpha(@blk, 0.4);
+    background-color: alpha(@blk, 0.6);
     border: 1px solid @grn;
     border-radius: 8px;
     padding: 0 14px 0 8px;
 }
 
 #network.disconnected {
-    background-color: alpha(@red, 0.4);
+    background-color: alpha(@red, 0.6);
 }
 
 #tray > widget > * {
     color: @brblk;
-    background-color: alpha(@blk, 0.4);
+    background-color: alpha(@blk, 0.6);
     border: 1px solid @brblk;
     border-radius: 8px;
     padding: 0 8px;
