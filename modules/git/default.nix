@@ -13,6 +13,7 @@
         st = "status";
         ci = "commit";
         br = "branch"; 
+        sw = "switch";
       };
     };
   };
