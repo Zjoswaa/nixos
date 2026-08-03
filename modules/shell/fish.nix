@@ -17,6 +17,7 @@
       };
       interactiveShellInit = ''
         set fish_greeting
+        direnv hook fish | source
       '';
       functions.fish_prompt = {
         body = ''

@@ -55,6 +55,8 @@
     pkgs.libnotify
     pkgs.lm_sensors
     pkgs.brightnessctl
+    pkgs.tree
+    pkgs.direnv
 
     # Applications
     pkgs.nautilus
@@ -96,6 +98,7 @@
   ];
 
   home.pointerCursor = {
+    enable = true;
     name = "Bibata-Modern-Ice";
     package = pkgs.bibata-cursors;
     size = 16;
