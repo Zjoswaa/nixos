@@ -24,9 +24,7 @@
   xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-hyprland ];
 
   # Enable OpenGL
-  hardware.graphics = {
-    enable = true;
-  };
+  hardware.graphics.enable = true;
 
   # Nvidia driver configuration
   services.xserver.videoDrivers = [ "nvidia" ];
@@ -66,6 +64,13 @@
     enable = true;
     xwayland.enable = true;
   };
+
+  programs.nix-ld.enable = true;
+  programs.nix-ld.libraries = with pkgs; [
+    wayland
+    libGL
+    libxkbcommon
+  ];
 
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";

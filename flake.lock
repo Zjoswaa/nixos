@@ -43,16 +43,32 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1785571196,
-        "narHash": "sha256-KoTsyMQqnXQZq8deCEnu4QkyldkwH/bpMMhUcfMdGIw=",
+        "lastModified": 1785692966,
+        "narHash": "sha256-vUfIeBEfpbAfZ5zjgIkYk7eHBeVfCYVjLbWnMkseYnk=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "148bab9c1c3c53136ecb44a6ea356a0ed5b39b06",
+        "rev": "643809054d65fdd466a63e3155b8c498cb483c04",
         "type": "github"
       },
       "original": {
         "owner": "nixos",
         "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs-patched": {
+      "locked": {
+        "lastModified": 1785314904,
+        "narHash": "sha256-D7u29L6oWGfPxmUegFxUSUdc0FdjfcjBRZLUZtdIdPM=",
+        "owner": "baracoder",
+        "repo": "nixpkgs",
+        "rev": "eadd6f50ffdfa3dca52328e43068ec13d63fdfa3",
+        "type": "github"
+      },
+      "original": {
+        "owner": "baracoder",
+        "ref": "rider-fix-jcef",
         "repo": "nixpkgs",
         "type": "github"
       }
@@ -65,11 +81,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1785670577,
-        "narHash": "sha256-tSlzlQkxdK5m6DDHBLi8ftlIdc5zWeXARjsNwiqVe0I=",
+        "lastModified": 1785784727,
+        "narHash": "sha256-zJ4IQVqEHsZIKF0qMeI9HI4lgOVLe7RBxdua09cte8Q=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "4b71a00f621fb86f8fa2cf29c780c0d9d9eee7e6",
+        "rev": "1cf78d73fa765d346bab3ecd959bb7bfd885a853",
         "type": "github"
       },
       "original": {
@@ -82,6 +98,7 @@
       "inputs": {
         "home-manager": "home-manager",
         "nixpkgs": "nixpkgs",
+        "nixpkgs-patched": "nixpkgs-patched",
         "nur": "nur"
       }
     }

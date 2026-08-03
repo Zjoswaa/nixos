@@ -11,9 +11,10 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nixpkgs-patched.url = "github:baracoder/nixpkgs/rider-fix-jcef";
   };
 
-  outputs = { nixpkgs, nur, home-manager, ... }: {
+  outputs = { nixpkgs, nur, home-manager, nixpkgs-patched, ... }@inputs: {
     nixosConfigurations.legion = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
@@ -29,6 +30,8 @@
           home-manager = {
             useGlobalPkgs = true;
             useUserPackages = true;
+            # ADD THIS LINE: Pass inputs to home.nix
+            extraSpecialArgs = { inherit inputs; };
             users.joshua = import ./home.nix;
             backupFileExtension = "backup";
           };

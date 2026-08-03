@@ -1,5 +1,12 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
+let
+  # Initialize the patched nixpkgs
+  patchedPkgs = import inputs.nixpkgs-patched {
+    system = pkgs.system;
+    config.allowUnfree = true;
+  };
+in
 {
   imports = [
     ./modules/browser
@@ -71,7 +78,8 @@
     # IDE's
     pkgs.jetbrains.idea
     pkgs.jetbrains.rider
-    pkgs.jetbrains.clion
+    # pkgs.jetbrains.clion
+    patchedPkgs.jetbrains.clion
     pkgs.jetbrains.webstorm
 
     # Python
