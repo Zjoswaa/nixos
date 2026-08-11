@@ -3,7 +3,7 @@
 let
   # Initialize the patched nixpkgs
   patchedPkgs = import inputs.nixpkgs-patched {
-    system = pkgs.system;
+    system = pkgs.stdenv.hostPlatform.system;
     config.allowUnfree = true;
   };
 in
@@ -45,6 +45,14 @@ in
     source = ./scripts;
     recursive = true;
   };
+  home.file.".config/systemd/user/hyprland-session.target".text = ''
+    [Unit]
+    Description=Hyprland compositor session
+    Documentation=man:systemd.special(7)
+    BindsTo=graphical-session.target
+    Wants=graphical-session-pre.target
+    Before=graphical-session.target
+  '';
 
   home.packages = [
     # Util & Core
@@ -57,6 +65,7 @@ in
     pkgs.hyprcursor
     pkgs.hyprshot
     pkgs.hyprpicker
+    pkgs.hyprsunset
     pkgs.wofi
     pkgs.swaynotificationcenter
     pkgs.libnotify
@@ -74,6 +83,10 @@ in
     pkgs.spotify
     pkgs.keepassxc
     pkgs.postman
+
+    # Themes
+    pkgs.adwaita-qt
+    pkgs.adwaita-qt6
 
     # IDE's
     pkgs.jetbrains.idea
@@ -129,6 +142,22 @@ in
       name = "Papirus-Dark";
       package = pkgs.papirus-icon-theme;
     };
+    gtk3.extraConfig = {
+      Settings = ''
+        gtk-application-prefer-dark-theme=1
+      '';
+    };
+    gtk4.extraConfig = {
+      Settings = ''
+        gtk-application-prefer-dark-theme=1
+      '';
+    };
+  };
+
+  qt = {
+    enable = true;
+    platformTheme.name = "adwaita";
+    style.name = "adwaita-dark";
   };
 
   xdg.mimeApps = {
