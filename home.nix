@@ -1,7 +1,6 @@
 { config, pkgs, inputs, ... }:
 
 let
-  # Initialize the patched nixpkgs
   patchedPkgs = import inputs.nixpkgs-patched {
     system = pkgs.stdenv.hostPlatform.system;
     config.allowUnfree = true;
