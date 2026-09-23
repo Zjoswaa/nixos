@@ -18,6 +18,16 @@
   networking.hostName = "legion";
 
   services.displayManager.ly.enable = true;
+  # services.displayManager = {
+  #   sddm = {
+  #     enable = true;
+  #     wayland.enable = true;
+  #   };
+  #   # autoLogin = {
+  #   #   enable = true;    
+  #   #   user = "joshua";
+  #   # };
+  # };
   services.displayManager.defaultSession = "hyprland";
 
   xdg.portal.enable = true;
