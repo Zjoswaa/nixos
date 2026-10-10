@@ -72,6 +72,7 @@ in
     pkgs.brightnessctl
     pkgs.tree
     pkgs.direnv
+    pkgs.openvpn
 
     # Applications
     pkgs.nautilus
@@ -82,6 +83,8 @@ in
     pkgs.spotify
     pkgs.keepassxc
     pkgs.postman
+    pkgs.obsidian
+    pkgs.kdePackages.kleopatra
 
     # Themes
     pkgs.adwaita-qt
@@ -90,8 +93,8 @@ in
     # IDE's
     pkgs.jetbrains.idea
     pkgs.jetbrains.rider
-    # pkgs.jetbrains.clion
-    patchedPkgs.jetbrains.clion
+    pkgs.jetbrains.clion
+    # patchedPkgs.jetbrains.clion
     pkgs.jetbrains.webstorm
 
     # Python
@@ -108,6 +111,11 @@ in
     pkgs.ninja
     pkgs.gnumake
     pkgs.valgrind
+
+    # Rust
+    pkgs.rustc
+    pkgs.cargo
+    pkgs.rustfmt
 
     # Node
     pkgs.nodejs_26
