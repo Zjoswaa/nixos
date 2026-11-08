@@ -11,12 +11,12 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nixpkgs-patched = {
-      url = "github:baracoder/nixpkgs/rider-fix-jcef";
-    };
+    # nixpkgs-patched = {
+    #   url = "github:baracoder/nixpkgs/rider-fix-jcef";
+    # };
   };
 
-  outputs = { nixpkgs, nur, home-manager, nixpkgs-patched, ... }@inputs: {
+  outputs = { nixpkgs, nur, home-manager, ... }@inputs: {
     nixosConfigurations.legion = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [

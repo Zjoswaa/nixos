@@ -1,11 +1,11 @@
 { config, pkgs, inputs, ... }:
 
-let
-  patchedPkgs = import inputs.nixpkgs-patched {
-    system = pkgs.stdenv.hostPlatform.system;
-    config.allowUnfree = true;
-  };
-in
+# let
+#   patchedPkgs = import inputs.nixpkgs-patched {
+#     system = pkgs.stdenv.hostPlatform.system;
+#     config.allowUnfree = true;
+#   };
+# in
 {
   imports = [
     ./modules/browser
