@@ -65,9 +65,9 @@
         "tooltip": true
     },
     "memory": {
-        "format": "{used}GiB ",
+        "format": "{used:.2f}GiB ",
 	    "tooltip": true,
-        "tooltip-format": "Used: {used} / {total}GiB\nSwap: {swapUsed} / {swapTotal}GiB"
+        "tooltip-format": "Used: {used:.2f} / {total:.2f}GiB\nSwap: {swapUsed:.2f} / {swapTotal:.2f}GiB"
     },
     "disk": {
         "interval": 60,
